@@ -1,0 +1,239 @@
+/* FONTS USED */
+@import url('https://fonts.google.com/specimen/Outfit');
+
+/* COLORS AND FONTS VARS */
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --very-dark-blue-main: hsl(217, 54%, 11%);
+    --very-dark-blue-card: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+    --main-font: 'Outfit';
+}
+
+/* GENERAL STYLE */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--very-dark-blue-main);
+    color: var(--white);
+}
+
+h1, p {
+    width: 325px;
+}
+
+
+/* HEADER STYLE */
+.title_container {
+    width: auto;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 26px;
+    font-family: var(--main-font), sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+/* MAIN STYLE */
+.card_container {
+    background-color: var(--very-dark-blue-main);
+    padding: 20px;
+    margin: 20px;
+}
+
+.card {
+    width: 300px;
+    height: auto;
+    background-color: var(--very-dark-blue-card);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.main_img_container {
+    margin: 0 auto;
+}
+
+.main_img_container a .main_image {
+    width: 290px;
+    height: auto;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 22px;
+    margin-top: 10px;
+}
+
+.main_img_container a {
+    position: relative;
+}
+
+.main_img_container a .hover_img_effect {
+    width: 262px;
+    height: 262px;
+    background: var(--cyan);
+    display: none;
+}
+
+.main_img_container a:hover .hover_img_effect {
+    display: block;
+    position: absolute;
+    top: -262px;
+    left: 14px;
+    opacity: 0.5;
+    border-radius: 8px;
+    transition: all 2s ease-in;
+}
+
+.icon_view {
+    position: absolute;
+    top: -152px;
+    left: 120px;
+    display: none;
+}
+
+.main_img_container a:hover .icon_view {
+    display: block;
+    transition: all 2s ease-in;
+}
+
+.card_title {
+    font-family: var(--main-font), sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    margin: 10px 0 0 66px;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.card a:link, .card a:visited {
+    color: var(--white);
+}
+
+.card_text {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: var(--main-font), sans-serif;
+    padding: 0 31px;
+    margin: 15px 0 10px 0;
+    line-height: 1.5;
+    color: var(--soft-blue);
+}
+
+.stats {
+    width: 340px;
+    display: flex;
+    flex-direction: row;
+    padding: 0 40px;
+    margin: 10px 0;
+}
+
+.eth_stat {
+    width: 165px;
+    display: flex;
+    align-items: center;
+}
+
+.eth_stat p {
+    margin-left: 8px;
+    font-size: 15px;
+    color: var(--cyan);
+    font-weight: 600;
+    font-family: var(--main-font), sans-serif;
+}
+
+.days_left {
+    width: 160px;
+    display: flex;
+    align-items: center;
+}
+
+.days_left p {
+    color: var(--soft-blue);
+    font-size: 15px;
+    font-family: var(--main-font), sans-serif;
+    font-weight: 400;
+    margin-left: 8px;
+}
+
+.card_creator {
+    display: flex;
+    align-items: center;
+    width: 275px;
+    margin: 20px;
+    padding-left: 8px;
+}
+
+.creator_avatar img {
+    width: 35px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+}
+
+.card_creator .creator_name {
+    padding-left: 15px;
+    color: var(--soft-blue);
+    font-family: var(--main-font), sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.card_creator .creator_name a {
+    color: var(--white);
+}
+
+.card_title a:hover,
+.card_creator .creator_name a:hover {
+    color: var(--cyan);
+    transition: all 0.1s ease-in;
+}
+
+.card_line {
+    margin-top: 8px;
+    width: 258px;
+    color: var(--very-dark-blue-line);
+}
+
+
+/* FOOTER STYLE */
+.attribution { 
+    font-size: 14px; 
+    text-align: center; 
+}
+
+.attribution a, .attribution a:link, .attribution a:visited { 
+    color: var(--cyan); 
+}
+
+
+/* ========== MEDIA QUERY ========== */
+
+@media (min-width: 1600px) {
+    .title_container {
+        padding-top: 150px;
+    }
+
+    .title_container .title {
+        font-size: 30px;
+    }
+
+    .card_container {
+        padding-top: 75px;
+    }
+}
