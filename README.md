@@ -35,7 +35,7 @@ Here, you can see a screenshot of the final result.
 ### Links
 
 - Repository URL: [Click here](https://github.com/GregoriM04/nft-preview-card-component.git)
-- Live Site URL: [Click here](https://your-live-site-url.com)
+- Live Site URL: [Click here](https://gregorim04.github.io/nft-preview-card-component/)
 
 
 ## My process
